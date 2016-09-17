@@ -1,0 +1,24 @@
+how google's alphago beat a go world champion
+
+alphago is a computer program developed by google deepmind in london to play the board game go.
+in october twenty fifteen, it became the first computer go program to beat a professional human go player 
+without handicaps on a full-sized nineteen by nineteen board. in march twenty sixteen, it beat lee sedol in a five-game match, 
+the first time a computer go program has beaten a nine-dan professional without handicaps. although it lost to lee sedol in the 
+fourth game, lee resigned the final game, giving a final score of four games to one in favour of alphago. in recognition of 
+beating lee sedol, alphago was awarded an honorary nine-dan by the korea baduk association.
+
+alphago's algorithm uses a monte carlo tree search to find its moves based on knowledge previously "learned" by machine learning, 
+specifically by an artificial neural network (a deep learning method) by extensive training, 
+
+at its core, the game of go, which originated in china more than twenty five hundred years ago, is an abstract war simulation. 
+players start with a completely blank board and place black and white stones, one at a time, to surround territory. once placed, 
+stones do not move, and they are removed only if they are "killed"-that is, surrounded completely by the opponent's stones. and 
+so the game goes-black stone, white stone, black stone, white stone-until the board is covered in an intricate tapestry of black and white.
+
+the rules of go are simple and take only a few minutes to learn, but the possibilities are seemingly endless. however, the number of 
+potential legal board positions is greater than the number of atoms in the universe.
+
+what we learned in seoul with alphago? go isn't just a game-it is a living, breathing culture of players, analysts, fans, and legends. 
+over the last 10 days in seoul, south korea, we have been lucky enough to witness some of that incredible excitement firsthand. 
+we have also had the chance to see something that is never happened before: deepmind's alphago took on and defeated legendary go player, 
+lee sedol (nine-dan professional with eighten world titles), marking a major milestone for artificial intelligence.
