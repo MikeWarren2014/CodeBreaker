@@ -1,0 +1,9 @@
+#ifndef CIPHERTYPE_H
+#define CIPHERTYPE_H
+
+enum CipherType
+{
+	SUBSTITUTION, VIGENERE, LFSR4, PERMUTATION, HILL, AFFINE, AUTOKEY
+};
+
+#endif
