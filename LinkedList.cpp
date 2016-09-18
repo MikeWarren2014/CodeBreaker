@@ -87,6 +87,7 @@ LinkedList<Object>& LinkedList<Object>::operator=(const LinkedList<Object>& rhs)
 		this->lastNode = firstListItrCopy;
 		
 	}
+	this->elementCount = rhs.elementCount;
 	// return this
 	return *this;
 }
