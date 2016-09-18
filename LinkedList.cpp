@@ -58,36 +58,37 @@ LinkedList<Object>::~LinkedList()
 template <class Object>
 LinkedList<Object>& LinkedList<Object>::operator=(const LinkedList<Object>& rhs)
 {
-	// copy lastNode
-	//*(this->lastNode) = *(rhs.lastNode); // it's not this simple
-	/*if (!this->lastNode)
+	// fetch this->headerNode, rhs.headerNode into firstListItr,secondListItr, respectively
+	ListNode<Object> * firstListItr = this->headerNode, * secondListItr = rhs.headerNode;
+	// for copying firstListItr
+	ListNode<Object> * firstListItrCopy = 0;
+	// while firstListItr,secondListItr not empty
+	while ((firstListItr = firstListItr->nextNode) && (secondListItr = secondListItr->nextNode))
 	{
-		if (rhs.lastNode)
-		{
-			this->lastNode = new(std::nothrow) ListNode<Object>(rhs.lastNode->content);
-		}
+		// copy value of secondListItr into firstListItr
+		firstListItr->content = secondListItr->content;
+		// make copy of firstListItr
+		firstListItrCopy = firstListItr;
 	}
-	else 
+	// for every non-null iterator in rhs, from secondListItr on
+	for (ListNode<Object> * itr = secondListItr;	
+			itr != 0;
+			itr = itr->nextNode)
 	{
-		if (rhs.lastNode)
-		{
-			this->lastNode->content = rhs.lastNode->content;
-		}
-		else
-		{
-			//delete this->lastNode;
-			this->lastNode = 0;
-		}
-	}*/
-	if (!rhs.lastNode) this->lastNode = 0;
-	else
-	{
-		this->lastNode = new(std::nothrow) ListNode<Object>(rhs.lastNode->content);
+		// add value of that iterator to this, using method
+		this->addToEnd(itr->content);
 	}
-    // copy the headerNode and the rest will follow
-    *(this->headerNode) = *(rhs.headerNode);
-    this->elementCount = rhs.elementCount;
-    return *this;
+	// if firstListItr not null and secondListItr is
+	if ((firstListItr) && (!secondListItr))
+	{
+		// delete node at firstListItr (should be recursive delete)
+		delete firstListItr;
+		// this->lastNode is the node pointed to by firstListItrCopy
+		this->lastNode = firstListItrCopy;
+		
+	}
+	// return this
+	return *this;
 }
 
 // getting the number of elements contained in *this
